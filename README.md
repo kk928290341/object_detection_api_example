@@ -1,7 +1,11 @@
 # object_detection_api_example
 tensorflow object detection api 简单使用的工程化例子
 ## 环境配置
-需要[tensorflow object detection api](https://github.com/tensorflow/models/tree/master/research) 原始api需要先编译protobuf库。我已经编译好了，所以可以直接用。只要object_detection和slim就可以开始使用api了。你可以把这两个文件放在当前目录下也可以加到python的环境变量里去。
+需要[tensorflow object detection api](https://github.com/tensorflow/models/tree/master/research) 原始api需要先编译protobuf库。我已经编译好了，所以可以直接用。只要object_detection和slim就可以开始使用api了。把这两个加到python的环境变量里。如果用anaconda可以创建一个.pth文件加到anaconda3/Lib/site-packages目录下。例：创建一个tensorflow_model.pth内容为
+```
+D:\Project\models-master\research
+D:\Project\models-master\research\slim
+```
 ## 制作自己的tfrecord数据集
 1. 下载labelTool.zip 内有标注说明，使用labelTool工具将原始.jpg图片全部标注为相应的.xml文件。
 （标注时所有图片放在同一个文件夹下）标注后将所有.jpg放在data/images/ 所有.xml放在data/annotations/
